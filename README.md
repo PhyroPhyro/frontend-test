@@ -51,3 +51,14 @@ use-a!)
 
 
 <br><br><sub>Os dados presentes neste teste são totalmente fictícios.</sub>
+
+<h1>EDIT 13/01/2017</h1>
+
+Agora é necessário executar a aplicação por meio do comando: 
+
+		grunt 
+
+E então abrir no navegador o endereço dado diretamente no console.
+
+
+<br><br><sub>Alguns dados dentro de "fazenda.json" parecem ter sido alterados (em comparação ao screenshot de referência). <br> Ele permanece da maneira que estava no repositório, em virtude da regra de não altera-lo</sub>

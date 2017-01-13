@@ -1,4 +1,4 @@
-var app         = require('connect')()
+var app = require('connect')()
 var serveStatic = require('serve-static')
 
 app.use(serveStatic('public'))

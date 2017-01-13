@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -6,9 +6,46 @@
     <title>R7 FrontEnd Test</title>
 
     <link rel="stylesheet" href="stylesheets/style.css" media="all">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css" media="all">
+    <link rel="stylesheet" href="stylesheets/bootstrap-theme.css" media="all">
   </head>
-  <body>
-      <!-- let's code :D -->
+  
+    <body  style="background-color:#272727;" ng-app="FrontEndApp" ng-controller="mainController">
+        <div class="container">
+            <div class="col-lg-12 col-md-12 col-sm-12 fazenda-header"><p class="ranking-title">RANKING</p></div>
+            <div class="row">
+                <ul class="col-lg-4 fazenda-list">
+                  <li class="ranking-item inactive" id="item-{{$index}}" ng-mouseenter="changeColor($index,true)" ng-mouseleave="changeColor($index,false)" ng-repeat="item in content">
+                      <div class="col-lg-3 item-center">
+                        <div class="circle inactive" id="circle-{{$index}}">
+                            <div class="img-circle" style="background-image:url({{item.picture}})"></div>
+                            <div class="mini-circle">
+                                <p style="font-family:Montserrat Bold; color: gray; left: 5px; position: relative" > {{$index + 1}}</p>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-9 item-center">
+                           <p class="item-name inactive" id="name-{{$index}}" > {{item.name}}</p>
+                           <p class="item-desc inactive" id="desc-{{$index}}"> {{item.description}}</p>
+                      </div>
+                      <div class="ranking-tooltip inactive" style="position:absolute; width: 185px;left: 350px" id="tooltip-{{$index}}">
+                          <p class="col-lg-5 tooltip-title" style="left:5px">GOSTAM</p>
+                          <p class="col-lg-7 tooltip-title" style="left:-6px">NÃO GOSTAM</p>
+                          <p class="col-lg-5 tooltip-perc" style="text-align:center;">{{item.positivePerc}}%</p>
+                          <p class="col-lg-7 tooltip-perc" style="text-align:center; left:-15px">{{item.negativePerc}}%</p>
+                      </div>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </body>
 
+	<script src="//localhost:35729/livereload.js"></script>
+	<script src="javascripts/data/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.4.0/ui-bootstrap-tpls.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.4.0/ui-bootstrap.min.js"></script>
+	<script src="javascripts/data/bootstrap.min.js"></script>
     <script src="javascripts/main.js"></script> 
 </html>
